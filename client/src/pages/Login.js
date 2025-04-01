@@ -31,7 +31,7 @@ const Login = () => {
       console.log('Firebase ID token obtained:', idToken);
 
       console.log('Sending request to backend /auth/login...');
-      const response = await axios.post('http://localhost:5000/auth/login', {
+      const response = await axios.post('https://finanace-tracker-backend.onrender.com/auth/login', {
         idToken,
       });
       console.log('Backend response:', response.data);
@@ -60,7 +60,7 @@ const Login = () => {
       console.log('Firebase ID token obtained:', idToken);
 
       console.log('Sending request to backend /auth/google...');
-      const res = await axios.post('http://localhost:5000/auth/google-login', { idToken });
+      const res = await axios.post('https://finanace-tracker-backend.onrender.com/auth/google-login', { idToken });
       console.log('Backend response:', res.data);
 
       localStorage.setItem('token', res.data.token);
