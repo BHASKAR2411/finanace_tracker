@@ -11,7 +11,7 @@ const BudgetForm = () => {
       const token = localStorage.getItem('token');
       const user_id = localStorage.getItem('user_id');
       await axios.post(
-        'http://localhost:5000/budgets/add',
+        'https://finanace-tracker-backend.onrender.com/budgets/add',
         { user_id, category, amount }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
