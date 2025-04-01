@@ -24,7 +24,7 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const idToken = await userCredential.user.getIdToken();
 
-      const response = await axios.post('http://localhost:5000/auth/signup', {
+      const response = await axios.post('https://finanace-tracker-backend.onrender.com/auth/signup', {
         idToken,
       });
 
