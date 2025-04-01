@@ -19,7 +19,7 @@ const IncomeForm = ({ onTransactionAdded }) => {
       }
 
       await axios.post(
-        'http://localhost:5000/transactions/add',
+        'https://finanace-tracker-backend.onrender.com/transactions/add',
         {
           user_id,
           type: 'income',
