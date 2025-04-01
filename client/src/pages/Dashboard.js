@@ -55,12 +55,12 @@ const Dashboard = () => {
         headers: { Authorization: `Bearer ${token}` },
       }
 
-      const userRes = await axios.get("http://localhost:5000/auth/user", config)
+      const userRes = await axios.get("https://finanace-tracker-backend.onrender.com/auth/user", config)
       setUser(userRes.data)
 
-      const incomeRes = await axios.get("http://localhost:5000/transactions/income", config)
-      const expensesRes = await axios.get("http://localhost:5000/transactions/expenses", config)
-      const splitExpensesRes = await axios.get("http://localhost:5000/transactions/split-expenses", config)
+      const incomeRes = await axios.get("https://finanace-tracker-backend.onrender.com/transactions/income", config)
+      const expensesRes = await axios.get("https://finanace-tracker-backend.onrender.com/transactions/expenses", config)
+      const splitExpensesRes = await axios.get("https://finanace-tracker-backend.onrender.com/transactions/split-expenses", config)
 
       setIncome(incomeRes.data)
       setExpenses(expensesRes.data)
@@ -193,7 +193,7 @@ const Dashboard = () => {
         headers: { Authorization: `Bearer ${token}` },
       }
 
-      await axios.put(`http://localhost:5000/transactions/${id}`, { type, ...editFormData }, config)
+      await axios.put(`https://finanace-tracker-backend.onrender.com/transactions/${id}`, { type, ...editFormData }, config)
 
       setEditingIncomeId(null)
       setEditingExpenseId(null)
@@ -216,7 +216,7 @@ const Dashboard = () => {
         headers: { Authorization: `Bearer ${token}` },
       }
 
-      await axios.delete(`http://localhost:5000/transactions/${id}`, {
+      await axios.delete(`https://finanace-tracker-backend.onrender.com/transactions/${id}`, {
         ...config,
         data: { type },
       })
