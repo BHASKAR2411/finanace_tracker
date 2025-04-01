@@ -20,7 +20,7 @@ const Account = () => {
           throw new Error('No token found');
         }
 
-        const response = await axios.get('http://localhost:5000/auth/user', {
+        const response = await axios.get('https://finanace-tracker-backend.onrender.com/auth/user', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
